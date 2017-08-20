@@ -1,0 +1,66 @@
+<!--pages/setting/setting.wxml-->
+<view class="blackBox">
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">
+    {{userInfo.nickName}}
+    <br/>
+    你今日搞左未啊？
+    </text>
+  </view>
+</view>
+
+
+<view class="setTitle">
+  我的番茄
+</view>
+
+<view class="pickerBox">
+  <view class="viewLeft">
+    <view class="numBox">13</view>
+    <view class="titleBox">番茄篮</view>
+  </view>
+  <view class="viewRight">
+    <view class="numBox">4</view>
+    <view class="titleBox">今天番茄</view>
+  </view>
+</view>
+<view class="pickerBox">
+  <view class="textLeft">烂番茄</view>
+  <view class="textRight">5</view>
+</view>
+<view class="pickerBox">
+  <view class="textLeft">番茄排行榜</view>
+  <view class="textRight">></view>
+</view>
+
+<view class="setTitle">
+  番茄设置
+</view>
+
+
+<picker class="pickerBox" bindchange="bindPickerChangeCount" value="{{countIndex}}" range="{{countList}}">
+  <view class="textLeft">循环次数</view>
+  <view class="textRight">{{countList[countIndex]}}</view>
+</picker>
+
+<picker class="pickerBox" bindchange="bindPickerChangeRest" value="{{restIndex}}" range="{{timeList}}">
+  <view class="textLeft">休息时间</view>
+  <view class="textRight">{{timeList[restIndex]}}</view>
+</picker>
+
+<picker class="pickerBox" bindchange="bindPickerChangeMusic" value="{{MusicIndex}}" range="{{musicList}}">
+  <view class="textLeft">背景音乐</view>
+  <view class="textRight">{{musicList[musicIndex]}}</view>
+</picker>
+
+<view class="setTitle">
+  关于
+</view>
+
+<view class="pickerBox">
+  <view class="textLeft">使用帮助</view>
+</view>
+<view class="pickerBox">
+  <view class="textLeft">v0.2.3 内测版</view>
+</view>

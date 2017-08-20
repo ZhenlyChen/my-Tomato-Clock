@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/setting/setting",
+    "pages/clock/clock"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1A1A1A",
+    "navigationBarTitleText": "尧式番茄钟",
+    "navigationBarTextStyle": "light"
+  },
+  "tabBar": {
+    "backgroundColor":"#353535",
+    "selectedColor": "#fff",
+    "color": "#aaa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "番茄",
+        "iconPath": "res/tomato.png",
+        "selectedIconPath": "res/tomato.png"
+      },
+      {
+        "pagePath": "pages/setting/setting",
+        "text": "自己",
+        "iconPath": "res/user.png",
+        "selectedIconPath": "res/user.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

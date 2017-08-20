@@ -1,0 +1,87 @@
+/* pages/setting/setting.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 30px;
+}
+
+page{
+  background: #eee;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 3px solid #000;
+}
+
+.userinfo-nickname {
+  margin-left: 20px;
+  color: #fff;
+  margin-top: -18px;
+}
+
+.blackBox{
+  background: #1A1A1A;
+  width: 100%;
+  padding-top: 1px;
+  padding-bottom: 10px;
+}
+
+.setTitle {
+  margin: 30rpx 0rpx 25rpx 20rpx;
+  color: #aaaaaa;
+  font-size: 14px;
+  text-align: left;
+}
+
+.pickerBox{
+  font-size: 17px;
+  background: #fff;
+  padding: 30rpx;
+  border-bottom: 1px solid #eee;
+}
+
+.textLeft{
+  position: relative;
+  display: inline-block;
+  color: #333333;
+  width: 50%;
+}
+
+.textRight{
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+  color: #828282;
+}
+
+.viewLeft{
+  position: relative;
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  border-right: 1px solid #eee;
+}
+.viewRight{
+  position: relative;
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+}
+
+
+.titleBox{
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: #333333;
+}
+
+.numBox{
+  font-size: 60rpx;
+  color: #DC143C;
+}

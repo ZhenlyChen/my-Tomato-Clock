@@ -1,0 +1,44 @@
+/**index.wxss**/
+
+.canvasStyle{
+  width: 750rpx;
+  height: 750rpx;
+  position: absolute;
+}
+
+.backClass {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.btnStart{
+  margin-top: 800rpx;
+  padding: 40rpx 100rpx;
+  color: #eee;
+  font-size: 34rpx;
+  border: 1px solid #eee;
+  border-radius: 30px;
+}
+
+.btnStop{
+  margin-top: 800rpx;
+  padding: 40rpx 100rpx;
+  color: #111;
+  font-size: 34rpx;
+  background: #eee;
+  border-radius: 30px;
+}
+
+.btnMusic{
+  z-index: 1000;
+  color: #fff;
+  position: absolute;
+  right:50rpx;
+  top:50rpx;
+}
+
+.svgMusic{
+  height: 70rpx;
+  width: 70rpx;
+}
