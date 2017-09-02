@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/setting/setting",
-    "pages/clock/clock"
+    "pages/clock/clock",
+    "pages/shop/shop",
+    "pages/tomato/tomato"
   ],
   "window": {
     "backgroundTextStyle": "light",

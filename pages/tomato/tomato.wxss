@@ -1,0 +1,21 @@
+/* pages/tomato/tomato.wxss */
+
+
+
+.picBox {
+  height: 400rpx;
+  width: 500rpx;
+}
+
+.textBox{
+  color: #fff;
+  font-size: 60rpx;
+}
+
+.btnStart{
+  padding: 40rpx 100rpx;
+  color: #eee;
+  font-size: 34rpx;
+  border: 1px solid #eee;
+  border-radius: 30px;
+}

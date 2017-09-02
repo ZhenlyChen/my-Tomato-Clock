@@ -12,9 +12,9 @@ Page({
     count: 0,
     musicIndex: 0,
     musicUrl: [
+      'https://mb.zhenly.cn/res/sea.mp3',
       'https://mb.zhenly.cn/res/coffee1.mp3',
       'https://mb.zhenly.cn/res/library2.mp3',
-      'https://mb.zhenly.cn/res/sea.mp3',
     ]
   },
   draw: function (pre, text, dir) {  //画时钟
@@ -67,11 +67,29 @@ Page({
     var rest = wx.getStorageSync('rest')
     var count = wx.getStorageSync('count')
     var musicIndex = wx.getStorageSync('musicIndex')
+    var tomatoNum = wx.getStorageSync('tomatoNum')
+    var tomatoToday = wx.getStorageSync('tomatoToday')
+    var tomatoBad = wx.getStorageSync('tomatoBad')
+    var buyMusic = wx.getStorageSync('buyMusic')
+
+    app.globalData.tomatoNum = tomatoNum == '' ? 5 : tomatoNum
+    app.globalData.tomatoToday = tomatoToday == '' ? new Date(1998,4,17) : tomatoToday
+    app.globalData.buyMusic = buyMusic == '' ? new Date(1998, 4, 17) : buyMusic
+    app.globalData.tomatoBad = tomatoBad == '' ? 0 : tomatoBad
     app.globalData.time = time == '' ? 45 : time
     app.globalData.rest = rest == '' ? 1 : rest
     app.globalData.count = count == '' ? 1 : count
     app.globalData.musicIndex = musicIndex == '' ? 1 : musicIndex
-
+    if (app.globalData.tomatoNum < 0) app.globalData.tomatoNum = 0
+    if (app.globalData.tomatoBad > 0) {
+      var isbad = Math.ceil(Math.random() * 10) > 5
+      if (isbad) {
+        var num = Math.ceil(Math.random() * 3)
+        app.globalData.tomatoNum -= num
+        if (app.globalData.tomatoNum < 0) app.globalData.tomatoNum = 0
+        wx.setStorageSync('tomatoNum', app.globalData.tomatoNum)
+      }
+    }
     that.drawBack()
     that.draw(app.globalData.time / 60, app.globalData.time + 'min', false)
 
@@ -110,6 +128,8 @@ Page({
   },
   running: function () {
     var that = this
+    console.log('stop:' + app.globalData.stop)
+    console.log('hasBegin:' + that.data.hasBegin)
     if (app.globalData.stop == true) {
       setTimeout(that.running, 1000)
       return
@@ -146,13 +166,21 @@ Page({
             hasBegin: false
           })
           that.draw(app.globalData.time / 60, app.globalData.time + 'min', false)
+          var tomato = Math.ceil(that.data.workTime / 10) * that.data.count
+          app.globalData.tomatoNum += tomato;
+          app.globalData.tomatoToday = new Date()
+          wx.setStorageSync('tomatoNum', app.globalData.tomatoNum)
+          wx.setStorageSync('tomatoToday', app.globalData.tomatoToday)
           wx.showModal({
             title: '提示',
-            content: '完成任务了，得到8个大番茄',
+            content: '完成任务了，得到' + tomato + '个大番茄',
             showCancel: false,
             confirmText: '我知道了',
             success: function (res) {
               app.globalData.stop = false
+              wx.navigateTo({
+                url: '../tomato/tomato?state=true&data=tomato',
+              })
             }
           })
           return
@@ -248,8 +276,13 @@ Page({
           that.setData({
             hasBegin: false
           })
+          app.globalData.tomatoBad += 1
+          wx.setStorageSync('tomatoBad', app.globalData.tomatoBad)
           that.draw(app.globalData.time / 60, app.globalData.time + 'min', false)
           that.stopMusic()
+          wx.navigateTo({
+            url: '../tomato/tomato?state=failed&data=1',
+          })
         }
       }
     })
@@ -289,5 +322,8 @@ Page({
         duration: 2000
       })
     }
+  },
+  onHide: function(){
+
   }
 })

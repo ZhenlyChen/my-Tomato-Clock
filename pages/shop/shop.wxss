@@ -1,0 +1,79 @@
+/* pages/shop/shop.wxss */
+
+.blackBox{
+  background: #1A1A1A;
+  width: 100%;
+  padding-top: 1px;
+  padding-bottom: 10px;
+}
+
+.titleBox{
+  color: #fff;
+  font-size: 50rpx;
+  margin: 80rpx 180rpx;
+}
+
+.picBox{
+  position: absolute;
+  height: 100rpx;
+  width: 100rpx;
+  top: 50rpx;
+  left:50rpx;
+}
+
+page{
+  background: #eee;
+}
+
+.itemBox{
+  margin-top: 70rpx;
+  background: #fff;
+  padding: 50rpx;
+}
+
+.itemTitle{
+  font-size: 40rpx;
+  margin-bottom: 30rpx;
+}
+
+.itemContent{
+  font-size: 30rpx;
+  color: #555;
+}
+
+.leftBox{
+  position: relative;
+  display: inline-block;
+  width: 500rpx;
+}
+
+.rightBox{
+  position: relative;
+  display: inline-block;
+  width: 150rpx;
+}
+
+.picMoney{
+  position: relative;
+  display: inline-block;
+  margin-left: 50rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.itemMoney{
+  position: relative;
+  display: inline-block;
+  font-size: 40rpx;
+  color: #E04D3B;
+}
+
+.btnBuy{
+  padding: 10rpx 15rpx;
+  color: #E04D3B;
+  font-size: 30rpx;
+  border: 1px solid #E04D3B;
+  text-align: center;
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+}

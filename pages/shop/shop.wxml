@@ -1,0 +1,25 @@
+<!--pages/shop/shop.wxml-->
+<view class="blackBox">
+  <image src="../../res/tomato.png" class="picBox"></image>
+  <view class="titleBox">
+    番茄商城
+  </view>
+</view>
+
+<view class="itemBox">
+  <view class="leftBox">
+    <view class="itemTitle">
+      特色音乐包
+    </view>
+    <view class="itemContent">
+      内含咖啡厅白噪音和图书馆白燥音的7天使用权
+    </view>
+  </view>
+  <view class="rightBox">
+    <image src="../../res/tomatoRed.png" class="picMoney"></image>
+    <view class="itemMoney">
+    10
+    </view>
+    <view class="btnBuy" bindtap="buyMusic">购买</view>
+  </view>
+</view>
