@@ -8,13 +8,13 @@
     "pages/tomato/tomato"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#1A1A1A",
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#1a1a1a",
     "navigationBarTitleText": "尧式番茄钟",
-    "navigationBarTextStyle": "light"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "backgroundColor":"#353535",
+    "backgroundColor": "#353535",
     "selectedColor": "#fff",
     "color": "#aaa",
     "list": [
@@ -38,5 +38,6 @@
     "uploadFile": 20000,
     "downloadFile": 10000
   },
-  "debug": true
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
 }

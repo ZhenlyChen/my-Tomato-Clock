@@ -1,16 +1,11 @@
 <!--index.wxml-->
- <view wx:if="{{hasBegin}}" class="btnMusic">
+ <!-- <view wx:if="{{hasBegin}}" class="btnMusic">
   <image bindtap="stopMusic" wx:if="{{musicPlay}}" class="svgMusic" src="../../res/music.svg"></image>
   <image bindtap="startMusic" wx:else class="svgMusic" src="../../res/music-no.svg"></image>
- </view>
+ </view> -->
 <view class="backClass">
  <canvas canvas-id="myCanvas2" class="canvasStyle"/>
- <canvas canvas-id="myCanvas" class="canvasStyle"
-  bindtouchmove="moveTouch" 
-  bindtouchstart="startTouch"
-  bindtouchend="endTouch"
-   />
-
+ <canvas canvas-id="myCanvas" class="canvasStyle" bindtouchmove="moveTouch"/>
  <view wx:if="{{!hasBegin}}" class="btnStart" bindtap="startTime">开始</view>
  <view wx:else class="btnStop" bindtap="stopTime">放弃</view>
 </view>

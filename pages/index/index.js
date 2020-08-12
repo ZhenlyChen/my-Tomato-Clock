@@ -262,7 +262,7 @@ Page({
       setTimeout(this.goToAll, 40)
     } else {
       this.running()
-      this.startMusic()
+      // this.startMusic()
     }
   },
   stopTime: function () {
@@ -279,7 +279,7 @@ Page({
           app.globalData.tomatoBad += 1
           wx.setStorageSync('tomatoBad', app.globalData.tomatoBad)
           that.draw(app.globalData.time / 60, app.globalData.time + 'min', false)
-          that.stopMusic()
+          // that.stopMusic()
           wx.navigateTo({
             url: '../tomato/tomato?state=failed&data=1',
           })
@@ -304,12 +304,6 @@ Page({
       this.draw(angle, Math.ceil(angle * 60) + 'min', false)
       app.globalData.time = Math.ceil(angle * 60)
     }
-  },
-  startTouch: function () {
-
-  },
-  endTouch: function () {
-
   },
   onShow: function () {
     if (app.globalData.time <= (app.globalData.rest * 5 + 5)) {

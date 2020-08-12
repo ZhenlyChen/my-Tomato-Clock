@@ -46,10 +46,10 @@
   <view class="textRight">{{timeList[restIndex]}}</view>
 </picker>
 
-<picker class="pickerBox" bindchange="bindPickerChangeMusic" value="{{MusicIndex}}" range="{{musicList}}">
+<!-- <picker class="pickerBox" bindchange="bindPickerChangeMusic" value="{{MusicIndex}}" range="{{musicList}}">
   <view class="textLeft">背景音乐</view>
   <view class="textRight">{{musicList[musicIndex]}}</view>
-</picker>
+</picker> -->
 
 <view class="setTitle">
   关于
